@@ -82,14 +82,27 @@ for (let i = 0; i < 700; i++) {
 
 
 
+// function animation() {
+//     c.clearRect(0,0,window.innerWidth,window.innerHeight);
+//     for (let i = 0; i < arrayOfCircles.length; i++) {
+//         arrayOfCircles[i].Update();
+//     }
+//     requestAnimationFrame(animation);
+// }
+
+// animation();
+
 function animation() {
-    c.clearRect(0,0,window.innerWidth,window.innerHeight);
-    for (let i = 0; i < arrayOfCircles.length; i++) {
-        arrayOfCircles[i].Update();
-    }
-    requestAnimationFrame(animation);
+    setInterval(() => {
+        c.clearRect(0,0,window.innerWidth,window.innerHeight);
+        for (let i = 0; i < arrayOfCircles.length; i++) {
+            arrayOfCircles[i].Update();
+        }
+    },15)
+   
 }
 
 animation();
+
 
 
